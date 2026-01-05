@@ -1,0 +1,1571 @@
+[
+    {
+        "name": "GAME_SPECIFIC_ERROR",
+        "regex": "1....",
+        "card": "1xxxx",
+        "comment": "Game specific error"
+    },
+    {
+        "name": "DWC_NAS_ERROR",
+        "regex": "2....",
+        "card": "2xxxx",
+        "comment": "NAS (authentication) error"
+    },
+    {
+        "name": "DWC_NAS_RETURN_CODE",
+        "regex": "20[1-8]..",
+        "card": "20xxx",
+        "comment": "Error returned from NAS request"
+    },
+    {
+        "name": "DWC_NAS_LOGIN_OK",
+        "regex": "20001",
+        "card": "20001",
+        "comment": "NAS login was successful",
+        "description": [
+            "This error code means the NAS login was successful. It should never be displayed in-game."
+        ]
+    },
+    {
+        "name": "DWC_NAS_ACCTCREATE_OK",
+        "regex": "20002",
+        "card": "20002",
+        "comment": "NAS acctcreate was successful",
+        "description": [
+            "This error code means the NAS account create was successful. It should never be displayed in-game."
+        ]
+    },
+    {
+        "name": "DWC_NAS_SVCLOC_OK",
+        "regex": "20007",
+        "card": "20007",
+        "comment": "NAS svcloc was successful",
+        "description": [
+            "This error code means the NAS service locate was successful. It should never be displayed in-game."
+        ]
+    },
+    {
+        "name": "DWC_NAS_PROFANE_INGAMESN",
+        "regex": "20064",
+        "card": "20064",
+        "comment": "NAS login returned a profanity error",
+        "description": [
+            "This error code is used internally to signify the NAS login was successful but the in-game screen name contains profanity. The game will display a unique message to the user but will never display this error code."
+        ]
+    },
+    {
+        "name": "DWC_NAS_CONNECT_ERROR",
+        "regex": "20100",
+        "card": "20100",
+        "comment": "Failed to connect to the WiiLink WFC server",
+        "description": [
+            "Generic catchall error for connection failures. Check your network connection, restart your console and try again.",
+            "",
+            "Some known causes include:",
+            "- For DNS users on Wii:",
+            "  - The DNS method requires launching the game from the disc channel. Attempting to use it elsewhere may result in this error.",
+            "- For Wii Virtual Console users on Wii U:",
+            "  - This error may result if you haven't patched your game to use WiiLink WFC."
+        ]
+    },
+    {
+        "name": "DWC_NAS_GAMESPY_MAINTENANCE_ERROR",
+        "regex": "20101",
+        "card": "20101",
+        "comment": "GameSpy maintenance",
+        "description": [
+            "WiiLink WFC is undergoing maintenance for this game."
+        ]
+    },
+    {
+        "name": "DWC_NAS_DEVICE_BANNED_ERROR",
+        "regex": "20102",
+        "card": "20102",
+        "comment": "Device is banned from Nintendo WFC",
+        "description": [
+            "This error code represents a ban from the original Nintendo Wi-Fi Connection service. This error code has been superseded by 22003 for WiiLink WFC. (Wiimmfi: 23917)."
+        ]
+    },
+    {
+        "name": "DWC_NAS_INVALID_MAC_ERROR",
+        "regex": "20103",
+        "card": "20103",
+        "comment": "Incorrect MAC address provided",
+        "description": [
+            "Obsolete error code from the original Nintendo Wi-Fi Connection service. The MAC address is no longer used for authentication on WiiLink WFC."
+        ]
+    },
+    {
+        "name": "DWC_NAS_ACCOUNT_ALREADY_EXISTS_ERROR",
+        "regex": "20104",
+        "card": "20104",
+        "comment": "Provided authentication info is already in use",
+        "description": [
+            "Failed to create an account on NAS because an account with the provided authentication data already exists. Not used by WiiLink WFC."
+        ]
+    },
+    {
+        "name": "DWC_NAS_ACCOUNT_NOT_FOUND_ERROR",
+        "regex": "20105",
+        "card": "20105",
+        "comment": "Provided authentication info is already in use",
+        "description": [
+            "Failed to login because an account with the provided authentication data does not exist. Not used by WiiLink WFC."
+        ]
+    },
+    {
+        "name": "DWC_NAS_MAX_PROFILE_COUNT_EXCEEDED_ERROR",
+        "regex": "20106",
+        "card": "20106",
+        "comment": "Reached maximum number of profiles for one account",
+        "description": [
+            "You've reached the maximum amount of profiles you can create or you are being rate limited."
+        ]
+    },
+    {
+        "name": "DWC_NAS_UNSUPPORTED_GAME_ID_ERROR",
+        "regex": "20107",
+        "card": "20107",
+        "comment": "Game is not supported"
+    },
+    {
+        "name": "DWC_NAS_USER_DELETED_ERROR",
+        "regex": "20108",
+        "card": "20108",
+        "comment": "Provided user account was deleted"
+    },
+    {
+        "name": "DWC_NAS_INVALID_GAME_ID_ERROR",
+        "regex": "20109",
+        "card": "20109",
+        "comment": "Provided game code is invalid"
+    },
+    {
+        "name": "DWC_NAS_INVALID_GAME_ID_ERROR",
+        "regex": "20110",
+        "card": "20110",
+        "comment": "Nintendo Wi-Fi Connection has been discontinued",
+        "description": [
+            "Your game is not patched for WiiLink WFC."
+        ]
+    },
+    {
+        "name": "WL_ERROR_PAYLOAD_STAGE0",
+        "regex": "2090.",
+        "card": "2090x",
+        "comment": "WiiLink WFC Stage0/patch error"
+    },
+    {
+        "name": "WL_ERROR_PAYLOAD_STAGE0_MISSING_STAGE1",
+        "regex": "20901",
+        "card": "20901",
+        "comment": "NAS did not return a proper Stage1 payload",
+        "description": [
+            "Please try again. If the issue persists, try redoing the WiiLink WFC patch.",
+            "If you are a developer making your own patch, check that the URL is correct."
+        ]
+    },
+    {
+        "name": "WL_ERROR_PAYLOAD_STAGE0_HASH_MISMATCH",
+        "regex": "20902",
+        "card": "20902",
+        "comment": "NAS returned an incorrect Stage1 payload",
+        "description": [
+            "Please try again. If the issue persists, try redoing the WiiLink WFC patch.",
+            "If you are a developer making your own patch, check that your hash is of the correct production Stage1 payload."
+        ]
+    },
+    {
+        "name": "WL_ERROR_PAYLOAD_STAGE1",
+        "regex": "209[12].",
+        "card": "209?x",
+        "comment": "WiiLink WFC Stage1 error"
+    },
+    {
+        "name": "WL_ERROR_PAYLOAD_STAGE1_ALLOC",
+        "regex": "20910",
+        "card": "20910",
+        "comment": "Failed to allocate memory for the payload (local error)",
+        "description": [
+            "This could be a game incompatibility with the WiiLink WFC patch. Please report this issue (alongside info about the game and your patch method) to WiiLink."
+        ]
+    },
+    {
+        "name": "WL_ERROR_PAYLOAD_STAGE1_MAKE_REQUEST",
+        "regex": "20911",
+        "card": "20911",
+        "comment": "Failed to make the payload download request (local error)",
+        "description": [
+            "This generally should not occur, but if it does then try restarting your game.",
+            "If you are a developer making your own patch, make sure that you initialized NHTTP with a proper allocator."
+        ]
+    },
+    {
+        "name": "WL_ERROR_PAYLOAD_STAGE1_RESPONSE",
+        "regex": "20912",
+        "card": "20912",
+        "comment": "An error occurred while downloading the payload",
+        "description": [
+            "Most likely a generic connection error. If the error persists, check the WiiLink WFC status at [status.wiilink24.com](https://status.wiilink24.com), or check your network connection and try again."
+        ]
+    },
+    {
+        "name": "WL_ERROR_PAYLOAD_STAGE1_HEADER_CHECK",
+        "regex": "20913",
+        "card": "20913",
+        "comment": "The payload server returned an invalid payload",
+        "description": [
+            "This should not occur. Maybe data was corrupted in transit, or there's a bug in the server or client-side patch."
+        ]
+    },
+    {
+        "name": "WL_ERROR_PAYLOAD_STAGE1_LENGTH_ERROR",
+        "regex": "20914",
+        "card": "20914",
+        "comment": "The downloaded payload exceeds the maximum length",
+        "description": [
+            "This should not occur. Maybe data was corrupted in transit, or there's a bug in the server or client-side patch."
+        ]
+    },
+    {
+        "name": "WL_ERROR_PAYLOAD_STAGE1_SALT_MISMATCH",
+        "regex": "20915",
+        "card": "20915",
+        "comment": "The downloaded payload contains an incorrect salt",
+        "description": [
+            "This should not occur. Maybe data was corrupted in transit, or there's a bug in the server or client-side patch."
+        ]
+    },
+    {
+        "name": "WL_ERROR_PAYLOAD_STAGE1_GAME_ID_MISMATCH",
+        "regex": "20916",
+        "card": "20916",
+        "comment": "The downloaded payload was built for a different game",
+        "description": [
+            "Make sure you applied the patch for the correct revision of your game."
+        ]
+    },
+    {
+        "name": "WL_ERROR_PAYLOAD_STAGE1_SIGNATURE_INVALID",
+        "regex": "20917",
+        "card": "20917",
+        "comment": "The downloaded payload has an incorrect signature",
+        "description": [
+            "This should not occur. Maybe data was corrupted in transit, or there's a bug in the server or client-side patch."
+        ]
+    },
+    {
+        "name": "WL_ERROR_PAYLOAD_STAGE1_WAITING",
+        "regex": "20918",
+        "card": "20918",
+        "comment": "Stage1 (DNS build) is waiting for a response from the payload server",
+        "description": [
+            "This is an internal code that should never reach the end user."
+        ]
+    },
+    {
+        "name": "WL_ERROR_PAYLOAD",
+        "regex": "209[3-9].",
+        "card": "209?x",
+        "comment": "WiiLink WFC payload error"
+    },
+    {
+        "name": "WL_ERROR_PAYLOAD_GAME_MISMATCH",
+        "regex": "20930",
+        "card": "20930",
+        "comment": "This payload was built for a different game",
+        "description": [
+            "Make sure you applied the patch for the correct revision of your game."
+        ]
+    },
+    {
+        "name": "DWC_WWFC_ERROR",
+        "regex": "22...",
+        "card": "22xxx",
+        "comment": "WiiLink WFC-specific error code"
+    },
+    {
+        "name": "WWFC_UNKNOWN_LOGIN_ERROR",
+        "regex": "22000",
+        "card": "22000",
+        "comment": "A miscellaneous login error",
+        "description": [
+            "This is more often than not an issue with your dumped console keys (particularly from a Wii U). [This tool from Leseratte](https://forum.wii-homebrew.com/index.php/Thread/59510-Fix-for-error-23934-on-Dolphin/) can be used to fix it."
+        ]
+    },
+    {
+        "name": "WWFC_DOLPHIN_SETUP_REQUIRED_ERROR",
+        "regex": "22001",
+        "card": "22001",
+        "comment": "Attempt to login with generic console credentials",
+        "description": [
+            "In order to help prevent ban circumvention, all emulator users are required to dump their retail Wii or Wii U console's keys to verify with. Read more at [wfc.wiilink24.com/dolphin](https://wfc.wiilink24.com/dolphin/)."
+        ]
+    },
+    {
+        "name": "WWFC_PROFILE_BANNED_TOS_ERROR",
+        "regex": "22002",
+        "card": "22002",
+        "comment": "Console is banned due to a Terms of Service violation",
+        "description": [
+            "You are banned from WiiLink WFC due to a violation of the [Terms of Service](https://wfc.wiilink24.com/tos/). This means you are unable to play online at all on any WiiLink WFC-supported game."
+        ]
+    },
+    {
+        "name": "WWFC_PROFILE_RESTRICTED_ERROR",
+        "regex": "22003",
+        "card": "22003",
+        "comment": "Console is restricted due to a WiiLink WFC Rules violation",
+        "description": [
+            "You are banned from public matches due to a violation of the [WiiLink WFC Rules](https://wfc.wiilink24.com/rules/). You may still join private friend rooms (where the host has added you)."
+        ]
+    },
+    {
+        "name": "WWFC_KICKED_ERROR",
+        "regex": "22004",
+        "card": "22004",
+        "comment": "Kicked from WiiLink WFC",
+        "description": [
+            "You were either kicked from WiiLink WFC by a moderator, or removed from a friend room by the host. You're welcome to reconnect to WiiLink WFC."
+        ]
+    },
+    {
+        "name": "WWFC_CONSOLE_MISMATCH_ERROR",
+        "regex": "22005",
+        "card": "22005",
+        "comment": "Login attempt from an unknown console",
+        "description": [
+            "The console you are using is not the device used to register the profile. If on Dolphin, make sure you've [set up your NAND correctly](https://wfc.wiilink24.com/dolphin/). You may not share profiles between multiple real consoles."
+        ]
+    },
+    {
+        "name": "WWFC_PROFILE_ID_INVALID",
+        "regex": "22006",
+        "card": "22006",
+        "comment": "Profile ID is inside a reserved range",
+        "description": [
+            "Profiles created on WiiLink WFC cannot be shared or transferred between third-party instances. Please create a new profile.",
+            "If you tried to set your profile ID manually, make sure it's under `1000000000`."
+        ]
+    },
+    {
+        "name": "WWFC_PROFILE_ID_IN_USE",
+        "regex": "22007",
+        "card": "22007",
+        "comment": "Profile ID is already in use",
+        "description": [
+            "The profile ID you're trying to register is already in use. Please create a new profile."
+        ]
+    },
+    {
+        "name": "WWFC_PAYLOAD_VERSION_INVALID",
+        "regex": "22008",
+        "card": "22008",
+        "comment": "The payload version is outdated or invalid",
+        "description": [
+            "If you're using a generic WiiLink WFC patch, you may have left your game open too long! Try restarting your game so WiiLink WFC can apply the latest patches.",
+            "If you're using a non-standard patch method, such as a game mod, you may need to update the mod. If you're on the latest version, contact the mod author about the error."
+        ]
+    },
+    {
+        "name": "WWFC_INVALID_ELO_ERROR",
+        "regex": "22009",
+        "card": "22009",
+        "comment": "Save data contains an invalid ELO value",
+        "description": [
+            "Your VR and/or BR value is set to an invalid value (must be within 1 and 9999). Please fix your save data and reconnect."
+        ]
+    },
+    {
+        "name": "WWFC_TOO_MANY_FRAMES_DROPPED",
+        "regex": "22010",
+        "card": "22010",
+        "comment": "Your game slowed down too much",
+        "description": [
+            "Your game dropped too many frames (lagged too much) while playing online.",
+            "This error code is deprecated and should no longer display on WiiLink WFC."
+        ]
+    },
+    {
+        "name": "DWC_NAS_LOGIN_HTTP_ERROR",
+        "regex": "23...",
+        "card": "23xxx",
+        "comment": "HTTP error returned from NAS login request"
+    },
+    {
+        "name": "DWC_NAS_SVCLOC_ERROR",
+        "regex": "24...",
+        "card": "24xxx",
+        "comment": "Error during SVCLOC request"
+    },
+    {
+        "name": "DWC_NAS_SVCLOC_HTTP_ERROR",
+        "regex": "25...",
+        "card": "25xxx",
+        "comment": "HTTP error returned from NAS svcloc request"
+    },
+    {
+        "name": "DWC_NAS_LOGIN_WIIMMFI_ERROR",
+        "regex": "2[35]9..",
+        "card": "2?9xx",
+        "comment": "Wiimmfi-specific HTTP error",
+        "description": [
+            "This app can no longer retrieve info for Wiimmfi errors. Please enter your error code at [wiimmfi.de/error](https://wiimmfi.de/error)."
+        ]
+    },
+    {
+        "name": "DWC_WIFI_ID_ERROR",
+        "regex": "29...",
+        "card": "29xxx",
+        "comment": "DWC Wi-Fi ID error"
+    },
+    {
+        "name": "DWC_WIFI_ID_NAND_FULL",
+        "regex": "29000",
+        "card": "29000",
+        "comment": "Cannot save Wi-Fi ID to NAND because it's full"
+    },
+    {
+        "name": "DWC_WIFI_ID_NAND_CORRUPTED",
+        "regex": "29001",
+        "card": "29001",
+        "comment": "Cannot save Wi-Fi ID to NAND because it's damaged"
+    },
+    {
+        "name": "DWC_EXTENDED_NAS_ERROR",
+        "regex": "3....",
+        "card": "3xxxx",
+        "comment": "Extended NAS (authentication) error"
+    },
+    {
+        "name": "DWC_GDB_ERROR",
+        "regex": "4....",
+        "card": "4xxxx",
+        "comment": "GDB (game database)/SAKE error"
+    },
+    {
+        "name": "NET_STARTUP_ERROR",
+        "regex": "5....",
+        "card": "5xxxx",
+        "comment": "Network initialization error"
+    },
+    {
+        "name": "DWC_SEQ_LOGIN_ERROR",
+        "regex": "6....",
+        "card": "6xxxx",
+        "comment": "Error during login"
+    },
+    {
+        "name": "DWC_SEQ_FRIEND_ERROR",
+        "regex": "7....",
+        "card": "7xxxx",
+        "comment": "Error during friend list operation"
+    },
+    {
+        "name": "DWC_SEQ_MATCH_ERROR",
+        "regex": "8....",
+        "card": "8xxxx",
+        "comment": "Error during matchmaking operation"
+    },
+    {
+        "name": "DWC_SEQ_GENERIC_ERROR",
+        "regex": "9....",
+        "card": "9xxxx",
+        "comment": "Error during gameplay or other operation"
+    },
+    {
+        "name": "DWC_GDB_STARTUP_ERROR",
+        "regex": "401..",
+        "card": "401xx",
+        "comment": "SAKE startup error"
+    },
+    {
+        "name": "DWC_GDB_START_REQUEST_ERROR",
+        "regex": "402..",
+        "card": "402xx",
+        "comment": "SAKE start request error"
+    },
+    {
+        "name": "DWC_GDB_UPDATE_RECORD_ERROR",
+        "regex": "404..",
+        "card": "404xx",
+        "comment": "SAKE UpdateRecord error"
+    },
+    {
+        "name": "DWC_GDB_DOWNLOAD_FILE_ERROR",
+        "regex": "405..",
+        "card": "405xx",
+        "comment": "SAKE download file error"
+    },
+    {
+        "name": "DWC_GDB_UPLOAD_FILE_ERROR",
+        "regex": "406..",
+        "card": "406xx",
+        "comment": "SAKE upload file error"
+    },
+    {
+        "name": "DWC_GDB_GET_MY_RECORDS_ERROR",
+        "regex": "407..",
+        "card": "407xx",
+        "comment": "SAKE GetMyRecords error"
+    },
+    {
+        "name": "DWC_GDB_SEARCH_FOR_RECORDS_ERROR",
+        "regex": "411..",
+        "card": "411xx",
+        "comment": "SAKE SearchForRecords error"
+    },
+    {
+        "name": "DWC_GDB_NO_MEMORY",
+        "regex": "4..01",
+        "card": "4xx01",
+        "comment": "SAKE out of memory"
+    },
+    {
+        "name": "DWC_GDB_NOT_AVAILABLE",
+        "regex": "4..02",
+        "card": "4xx02",
+        "comment": "SAKE not available"
+    },
+    {
+        "name": "DWC_GDB_CORE_SHUTDOWN_ERROR",
+        "regex": "4..03",
+        "card": "4xx03",
+        "comment": "SAKE core shutdown error"
+    },
+    {
+        "name": "DWC_GDB_INVALID_LOGIN_TICKET",
+        "regex": "4..04",
+        "card": "4xx04",
+        "comment": "SAKE invalid login ticket"
+    },
+    {
+        "name": "DWC_GDB_NOT_AUTHENTICATED",
+        "regex": "4..05",
+        "card": "4xx05",
+        "comment": "SAKE not authenticated"
+    },
+    {
+        "name": "DWC_GDB_INVALID_INPUT",
+        "regex": "4..06",
+        "card": "4xx06",
+        "comment": "SAKE invalid input"
+    },
+    {
+        "name": "DWC_GDB_INVALID_TABLEID",
+        "regex": "4..07",
+        "card": "4xx07",
+        "comment": "SAKE invalid table ID"
+    },
+    {
+        "name": "DWC_GDB_INVALID_FIELDS",
+        "regex": "4..08",
+        "card": "4xx08",
+        "comment": "SAKE invalid fields"
+    },
+    {
+        "name": "DWC_GDB_INVALID_NUM_FIELDS",
+        "regex": "4..09",
+        "card": "4xx09",
+        "comment": "SAKE invalid number of fields"
+    },
+    {
+        "name": "DWC_GDB_INVALID_FIELD_NAME",
+        "regex": "4..10",
+        "card": "4xx10",
+        "comment": "SAKE invalid field name"
+    },
+    {
+        "name": "DWC_GDB_INVALID_FIELD_TYPE",
+        "regex": "4..11",
+        "card": "4xx11",
+        "comment": "SAKE invalid field type"
+    },
+    {
+        "name": "DWC_GDB_INVALID_FIELD_VALUE",
+        "regex": "4..12",
+        "card": "4xx12",
+        "comment": "SAKE invalid field value"
+    },
+    {
+        "name": "DWC_GDB_INVALID_OFFSET",
+        "regex": "4..13",
+        "card": "4xx13",
+        "comment": "SAKE invalid offset"
+    },
+    {
+        "name": "DWC_GDB_INVALID_MAX",
+        "regex": "4..14",
+        "card": "4xx14",
+        "comment": "SAKE invalid max"
+    },
+    {
+        "name": "DWC_GDB_INVALID_RECORDIDS",
+        "regex": "4..15",
+        "card": "4xx15",
+        "comment": "SAKE invalid record IDs"
+    },
+    {
+        "name": "DWC_GDB_INVALID_NUM_RECORDIDS",
+        "regex": "4..16",
+        "card": "4xx16",
+        "comment": "SAKE invalid number of record IDs"
+    },
+    {
+        "name": "DWC_GDB_UNKNOWN_ERROR",
+        "regex": "4..17",
+        "card": "4xx17",
+        "comment": "SAKE unknown error"
+    },
+    {
+        "name": "DWC_GDB_REQ_SUCCESS",
+        "regex": "4..51",
+        "card": "4xx51",
+        "comment": "SAKE request success"
+    },
+    {
+        "name": "DWC_GDB_REQ_SECRET_KEY_INVALID",
+        "regex": "4..52",
+        "card": "4xx52",
+        "comment": "SAKE request secret key invalid"
+    },
+    {
+        "name": "DWC_GDB_REQ_SERVICE_DISABLED",
+        "regex": "4..53",
+        "card": "4xx53",
+        "comment": "SAKE request service disabled"
+    },
+    {
+        "name": "DWC_GDB_REQ_CONNECTION_TIMEOUT",
+        "regex": "4..54",
+        "card": "4xx54",
+        "comment": "SAKE request connection timeout"
+    },
+    {
+        "name": "DWC_GDB_REQ_CONNECTION_ERROR",
+        "regex": "4..55",
+        "card": "4xx55",
+        "comment": "SAKE request connection error"
+    },
+    {
+        "name": "DWC_GDB_REQ_MALFORMED_RESPONSE",
+        "regex": "4..56",
+        "card": "4xx56",
+        "comment": "SAKE request malformed response"
+    },
+    {
+        "name": "DWC_GDB_REQ_OUT_OF_MEMORY",
+        "regex": "4..57",
+        "card": "4xx57",
+        "comment": "SAKE request out of memory"
+    },
+    {
+        "name": "DWC_GDB_REQ_DATABASE_UNAVAILABLE",
+        "regex": "4..58",
+        "card": "4xx58",
+        "comment": "SAKE request database unavailable"
+    },
+    {
+        "name": "DWC_GDB_REQ_LOGIN_TICKET_INVALID",
+        "regex": "4..59",
+        "card": "4xx59",
+        "comment": "SAKE request login ticket invalid"
+    },
+    {
+        "name": "DWC_GDB_REQ_LOGIN_TICKET_EXPIRED",
+        "regex": "4..60",
+        "card": "4xx60",
+        "comment": "SAKE request login ticket expired"
+    },
+    {
+        "name": "DWC_GDB_REQ_TABLE_NOT_FOUND",
+        "regex": "4..61",
+        "card": "4xx61",
+        "comment": "SAKE request table not found"
+    },
+    {
+        "name": "DWC_GDB_REQ_RECORD_NOT_FOUND",
+        "regex": "4..62",
+        "card": "4xx62",
+        "comment": "SAKE request record not found"
+    },
+    {
+        "name": "DWC_GDB_REQ_FIELD_NOT_FOUND",
+        "regex": "4..63",
+        "card": "4xx63",
+        "comment": "SAKE request field not found"
+    },
+    {
+        "name": "DWC_GDB_REQ_FIELD_TYPE_INVALID",
+        "regex": "4..64",
+        "card": "4xx64",
+        "comment": "SAKE request field type invalid"
+    },
+    {
+        "name": "DWC_GDB_REQ_NO_PERMISSION",
+        "regex": "4..65",
+        "card": "4xx65",
+        "comment": "SAKE request no permission"
+    },
+    {
+        "name": "DWC_GDB_REQ_RECORD_LIMIT_REACHED",
+        "regex": "4..66",
+        "card": "4xx66",
+        "comment": "SAKE request record limit reached"
+    },
+    {
+        "name": "DWC_GDB_REQ_ALREADY_RATED",
+        "regex": "4..67",
+        "card": "4xx67",
+        "comment": "SAKE request already rated"
+    },
+    {
+        "name": "DWC_GDB_REQ_NOT_RATEABLE",
+        "regex": "4..68",
+        "card": "4xx68",
+        "comment": "SAKE request not rateable"
+    },
+    {
+        "name": "DWC_GDB_REQ_NOT_OWNED",
+        "regex": "4..69",
+        "card": "4xx69",
+        "comment": "SAKE request not owned"
+    },
+    {
+        "name": "DWC_GDB_REQ_FILTER_INVALID",
+        "regex": "4..70",
+        "card": "4xx70",
+        "comment": "SAKE request filter invalid"
+    },
+    {
+        "name": "DWC_GDB_REQ_SORT_INVALID",
+        "regex": "4..71",
+        "card": "4xx71",
+        "comment": "SAKE request sort invalid"
+    },
+    {
+        "name": "DWC_GDB_REQ_UNKNOWN_ERROR",
+        "regex": "4..72",
+        "card": "4xx72",
+        "comment": "SAKE request unknown error"
+    },
+    {
+        "name": "DWC_GDB_REQ_TARGET_FILTER_INVALID",
+        "regex": "4..80",
+        "card": "4xx80",
+        "comment": "SAKE request target filter invalid"
+    },
+    {
+        "name": "DWC_GS_INVALID_PROFILE_ID",
+        "regex": "60000",
+        "card": "60000",
+        "comment": "Invalid profile ID",
+        "description": [
+            "Your profile was created with a different server. Please read the following steps based on your console:",
+            "## Nintendo DS / DSi Games",
+            "You will need to erase your Nintendo WFC Configuration. This will not affect your save data. To do this, go to the Nintendo WFC settings in the game's online menu, select \"Options\", then select \"Erase Nintendo WFC Configuration\".",
+            "Your console will then restart. After that, enter the game again and reconfigure your connection settings.",
+            "## Wii Games",
+            "This error code will usually only occur if you are using the DNS method to play online. The solution is generally to reset your in-game profile (such as your license in Mario Kart Wii), which is less than ideal. If you don't want to do that, the following methods can be used to connect online using an old profile:",
+            "1. Some games such as Mario Kart Wii support multiple profiles. If you can clear one profile, you can use that to allow your old profile back online. Simply connect online using the new profile and navigate through the menus to begin searching for players.",
+            "  - Then, immediately back out and switch to your old profile. The WiiLink WFC patches will be applied by this point and you should be able to play online with your old profile. This process only needs to be done once.",
+            "2. If you have a softmodded Wii or are willing to softmod your Wii, you can use the [dedicated homebrew app](https://wfc.wiilink24.com/launcher) to launch the game with patches instead. This will automatically allow you to play online with your old profile.",
+            "  - Once you connect, the server will know your profile and you can connect using the DNS method from then on."
+        ]
+    },
+    {
+        "name": "DWC_GS_GP_ERROR",
+        "regex": "[6-9]1...",
+        "card": "?1xxx",
+        "comment": "GameSpy profile (GPCM/GPSP) error"
+    },
+    {
+        "name": "DWC_GS_PERS_ERROR",
+        "regex": "[6-9]2...",
+        "card": "?2xxx",
+        "comment": "GameSpy PERS error"
+    },
+    {
+        "name": "DWC_GS_GSTATS_ERROR",
+        "regex": "[6-9]3...",
+        "card": "?3xxx",
+        "comment": "GameSpy GameStats error"
+    },
+    {
+        "name": "DWC_GS_QR2_ERROR",
+        "regex": "[6-9]4...",
+        "card": "?4xxx",
+        "comment": "GameSpy QR2 (Query and Reporting) error"
+    },
+    {
+        "name": "DWC_GS_SB_ERROR",
+        "regex": "[6-9]5...",
+        "card": "?5xxx",
+        "comment": "GameSpy ServerBrowser error"
+    },
+    {
+        "name": "DWC_GS_NATNEG_ERROR",
+        "regex": "[6-9]6...",
+        "card": "?6xxx",
+        "comment": "GameSpy NAT negotiation error"
+    },
+    {
+        "name": "DWC_GS_GT2_ERROR",
+        "regex": "[6-9]7...",
+        "card": "?7xxx",
+        "comment": "GameSpy transmission error"
+    },
+    {
+        "name": "DWC_GS_GHTTP_ERROR",
+        "regex": "[6-9]8...",
+        "card": "?8xxx",
+        "comment": "GameSpy HTTP error"
+    },
+    {
+        "name": "DWC_GS_GENERIC_ERROR",
+        "regex": "[6-9]9...",
+        "card": "?9xxx",
+        "comment": "Generic GameSpy error"
+    },
+    {
+        "name": "DWC_GS_NETWORK_FAILURE",
+        "regex": "[6-9].01.",
+        "card": "?x01x",
+        "comment": "Network failure",
+        "description": [
+            "Lost connection to the server. If the error persists, check your network connection and try again."
+        ]
+    },
+    {
+        "name": "DWC_GS_SERVER_DOWN",
+        "regex": "[6-9].02.",
+        "card": "?x02x",
+        "comment": "Server failure",
+        "description": [
+            "Unable to communicate with the server. If the error persists, check the WiiLink WFC status at [status.wiilink24.com](https://status.wiilink24.com), or check your network connection and try again."
+        ]
+    },
+    {
+        "name": "DWC_GS_DNS_FAILURE",
+        "regex": "[6-9].03.",
+        "card": "?x03x",
+        "comment": "DNS failure",
+        "description": [
+            "Unable to resolve the server's IP address. If the error persists, check your DNS settings and network connection and try again."
+        ]
+    },
+    {
+        "name": "DWC_GS_INVALID_DATA",
+        "regex": "[6-9].04.",
+        "card": "?x04x",
+        "comment": "Invalid data received",
+        "description": [
+            "Received invalid data from the server. Check the WiiLink WFC status at [status.wiilink24.com](https://status.wiilink24.com)."
+        ]
+    },
+    {
+        "name": "DWC_GS_SOCKET_COMMUNICATION_ERROR",
+        "regex": "[6-9].05.",
+        "card": "?x05x",
+        "comment": "Socket communication error",
+        "description": [
+            "Error communicating on a socket. If the error persists, try restarting your game."
+        ]
+    },
+    {
+        "name": "DWC_GS_SOCKER_BIND_ERROR",
+        "regex": "[6-9].06.",
+        "card": "?x06x",
+        "comment": "Socket bind error",
+        "description": [
+            "Error binding on a socket. If the error persists, try restarting your game."
+        ]
+    },
+    {
+        "name": "DWC_GS_TIMED_OUT",
+        "regex": "[6-9].07.",
+        "card": "?x07x",
+        "comment": "Timed out",
+        "description": [
+            "The server took too long to respond. If the error persists, check the WiiLink WFC status at [status.wiilink24.com](https://status.wiilink24.com), or check your network connection and try again."
+        ]
+    },
+    {
+        "name": "DWC_GS_PEER_CONNECTION_FAILED",
+        "regex": "[6-9].08.",
+        "card": "?x08x",
+        "comment": "Problem with peer-to-peer connection",
+        "description": [
+            "Failed to connect to the other player. If the error persists, check your network connection and try again."
+        ]
+    },
+    {
+        "name": "DWC_GS_SERVER_FULL",
+        "regex": "[6-9].10.",
+        "card": "?x10x",
+        "comment": "Number of max connections exceeded",
+        "description": [
+            "The server is full. Please wait a moment and try again later."
+        ]
+    },
+    {
+        "name": "DWC_GS_STATS_LOGIN_FAILED",
+        "regex": "[6-9].20.",
+        "card": "?x20x",
+        "comment": "GameStats login failed",
+        "description": [
+            "Failed to log in to the GameStats server."
+        ]
+    },
+    {
+        "name": "DWC_GS_STATS_DATA_LOAD_ERROR",
+        "regex": "[6-9].21.",
+        "card": "?x21x",
+        "comment": "GameStats data load error"
+    },
+    {
+        "name": "DWC_GS_STATS_DATA_SAVE_ERROR",
+        "regex": "[6-9].22.",
+        "card": "?x22x",
+        "comment": "GameStats data save error"
+    },
+    {
+        "name": "DWC_GS_NOT_MUTUAL_FRIENDS",
+        "regex": "[6-9].40.",
+        "card": "?x40x",
+        "comment": "The other party is not a friend"
+    },
+    {
+        "name": "DWC_GS_PEER_CLOSED_CONNECTION",
+        "regex": "[6-9].41.",
+        "card": "?x41x",
+        "comment": "The other party closed the connection"
+    },
+    {
+        "name": "DWC_GS_NATNEG_FAILURE",
+        "regex": "[6-9].42.",
+        "card": "?x42x",
+        "comment": "Exceeded maximum allowed NAT negotiation attempts",
+        "description": [
+            "Failed to connect through your (or the other player's) network firewall. If the error persists, this may be due to an unstable network connection, or an unsupported NAT type.",
+            "If you are able to access your router's settings:",
+            "- Try port forwarding 22xxx to your console's IP address, where xxx is the last three digits of your console serial number (including the digit in the square).",
+            "- Or try enabling UPnP (Universal Plug and Play), or DMZ (Demilitarized Zone) for your console's IP address.",
+            "Otherwise:",
+            "- Try using a different network connection, or your mobile data connection if possible.",
+            "- Sometimes VPNs can increase (or decrease) network stability. Try using a VPN if you have one available. If you are already using a VPN, try disabling it."
+        ]
+    },
+    {
+        "name": "DWC_GS_SINGLE_NATNEG_FAILURE",
+        "regex": "[6-9].43.",
+        "card": "?x43x",
+        "comment": "Failed to NAT negotiate with the other player",
+        "description": [
+            "Failed to connect through your (or the other player's) network firewall. If the error persists, this may be due to an unstable network connection, or an unsupported NAT type.",
+            "If you are able to access your router's settings:",
+            "- Try port forwarding 22xxx to your console's IP address, where xxx is the last three digits of your console serial number (including the digit in the square).",
+            "- Or try enabling UPnP (Universal Plug and Play), or DMZ (Demilitarized Zone) for your console's IP address.",
+            "Otherwise:",
+            "- Try using a different network connection, or your mobile data connection if possible.",
+            "- Sometimes VPNs can increase (or decrease) network stability. Try using a VPN if you have one available. If you are already using a VPN, try disabling it."
+        ]
+    },
+    {
+        "name": "DWC_GS_CONN_CLOSE_FAILED",
+        "regex": "[6-9].60.",
+        "card": "?x60x",
+        "comment": "Error during closing a connection"
+    },
+    {
+        "name": "DWC_GS_RECV_INVALID_STATE",
+        "regex": "[6-9].61.",
+        "card": "?x61x",
+        "comment": "Data received in invalid receive state"
+    },
+    {
+        "name": "DWC_GS_RECV_BUFFER_OVERFLOW",
+        "regex": "[6-9].62.",
+        "card": "?x62x",
+        "comment": "Buffer overflow caused by received data"
+    },
+    {
+        "name": "DWC_GS_CONN_ALREADY_CLOSED",
+        "regex": "[6-9].64.",
+        "card": "?x64x",
+        "comment": "Attempted to close an already closed connection"
+    },
+    {
+        "name": "DWC_GS_AC_FATAL_ERROR",
+        "regex": "[6-9].70.",
+        "card": "?x70x",
+        "comment": "AC fatal error"
+    },
+    {
+        "name": "DWC_GS_GHTTP_OPEN_FILE_FAILURE",
+        "regex": "[6-9].80.",
+        "card": "?x80x",
+        "comment": "GHTTP file open failed"
+    },
+    {
+        "name": "DWC_GS_GHTTP_INVALID_POST",
+        "regex": "[6-9].81.",
+        "card": "?x81x",
+        "comment": "Invalid GHTTP transfer"
+    },
+    {
+        "name": "DWC_GS_GHTTP_INVALID",
+        "regex": "[6-9].82.",
+        "card": "?x82x",
+        "comment": "Invalid GHTTP information"
+    },
+    {
+        "name": "DWC_GS_GHTTP_UNSPECIFIED_ERROR",
+        "regex": "[6-9].83.",
+        "card": "?x83x",
+        "comment": "Unspecified GHTTP error"
+    },
+    {
+        "name": "DWC_GS_GHTTP_BUFFER_OVERFLOW",
+        "regex": "[6-9].84.",
+        "card": "?x84x",
+        "comment": "GHTTP buffer overflow"
+    },
+    {
+        "name": "DWC_GS_GHTTP_FAIL_PARSE_URL",
+        "regex": "[6-9].85.",
+        "card": "?x85x",
+        "comment": "GHTTP URL parsing error"
+    },
+    {
+        "name": "DWC_GS_GHTTP_INVALID_RESPONSE",
+        "regex": "[6-9].86.",
+        "card": "?x86x",
+        "comment": "Invalid response from GHTTP server"
+    },
+    {
+        "name": "DWC_GS_GHTTP_UNAUTHORIZED",
+        "regex": "[6-9].87.",
+        "card": "?x87x",
+        "comment": "GHTTP request rejected"
+    },
+    {
+        "name": "DWC_GS_GHTTP_FILE_READ_WRITE_FAILURE",
+        "regex": "[6-9].88.",
+        "card": "?x88x",
+        "comment": "GHTTP local file read/write error"
+    },
+    {
+        "name": "DWC_GS_GHTTP_FILE_INCOMPLETE",
+        "regex": "[6-9].89.",
+        "card": "?x89x",
+        "comment": "GHTTP download halted"
+    },
+    {
+        "name": "DWC_GS_GHTTP_FILE_TOO_BIG",
+        "regex": "[6-9].90.",
+        "card": "?x90x",
+        "comment": "GHTTP file size too big"
+    },
+    {
+        "name": "DWC_GS_GHTTP_ENCRYPTION_ERROR",
+        "regex": "[6-9].91.",
+        "card": "?x91x",
+        "comment": "GHTTP encryption error"
+    },
+    {
+        "name": "DWC_GS_NO_MEMORY",
+        "regex": "[6-9]...1",
+        "card": "?xxx1",
+        "comment": "Memory allocation failure"
+    },
+    {
+        "name": "DWC_GS_INVALID_ARGUMENT",
+        "regex": "[6-9]...2",
+        "card": "?xxx2",
+        "comment": "Parameter error"
+    },
+    {
+        "name": "DWC_GS_GT2_SOCKET_ERROR",
+        "regex": "[6-9]...3",
+        "card": "?xxx3",
+        "comment": "GameSpy GT2 socket error caused by SO error"
+    },
+    {
+        "name": "DWC_GS_NOT_INITIALIZED",
+        "regex": "[6-9]...4",
+        "card": "?xxx4",
+        "comment": "Library not initialized"
+    },
+    {
+        "name": "DWC_GS_ALREADY_INITIALIZED",
+        "regex": "[6-9]...5",
+        "card": "?xxx5",
+        "comment": "Library initialized twice"
+    },
+    {
+        "name": "DWC_GS_WM_INIT_FAILURE",
+        "regex": "[6-9]...6",
+        "card": "?xxx6",
+        "comment": "WM init faked"
+    },
+    {
+        "name": "DWC_GS_UNEXPECTED_STATE",
+        "regex": "[6-9]...9",
+        "card": "?xxx9",
+        "comment": "Unexpected state or unknown Gamespy error"
+    },
+    {
+        "name": "WCC_FORECAST_ERROR",
+        "regex": "FORE......",
+        "card": "FORExxxxxx",
+        "comment": "Forecast Channel error"
+    },
+    {
+        "name": "WCC_NEWS_ERROR",
+        "regex": "NEWS......",
+        "card": "NEWSxxxxxx",
+        "comment": "News Channel error"
+    },
+    {
+        "name": "WCC_DELETE_ERROR",
+        "regex": "(FORE|NEWS)000001",
+        "card": "????000001",
+        "comment": "Error deleting outdated data",
+        "description": [
+            "This error is usually caused by corrupted save data."
+        ]
+    },
+    {
+        "name": "WCC_MISC_WC24_ERROR",
+        "regex": "(FORE|NEWS)000002",
+        "card": "????000002",
+        "comment": "Miscellaneous WiiConnect24 error",
+        "description": [
+            "An unknown WiiConnect24 error occurred. Try reinstalling the patch."
+        ]
+    },
+    {
+        "name": "WCC_FILESYSTEM_ERROR",
+        "regex": "(FORE|NEWS)000003",
+        "card": "????000003",
+        "comment": "Error mounting the virtual FAT filesystem",
+        "description": [
+            "This error is usually caused by corrupted save data (VFF file)."
+        ]
+    },
+    {
+        "name": "WCC_UNKNOWN_ERROR",
+        "regex": "(FORE|NEWS)000004",
+        "card": "????000004",
+        "comment": "Unknown error"
+    },
+    {
+        "name": "WCC_TASK_ERROR",
+        "regex": "(FORE|NEWS)000005",
+        "card": "????000005",
+        "comment": "Error retrieving the downloaded data",
+        "description": [
+            "This error is usually caused by corrupted save data (VFF file)."
+        ]
+    },
+    {
+        "name": "WCC_INVALID_DATA",
+        "regex": "(FORE|NEWS)000006",
+        "card": "????000006",
+        "comment": "Error processing the downloaded data",
+        "description": [
+            "The downloaded data cannot be used. This may be caused by an incorrect date and time setting, an outdated patch, corrupted save data, or a server-side issue. Check the WiiLink server status at [status.wiilink24.com](https://status.wiilink24.com)."
+        ]
+    },
+    {
+        "name": "WCC_INTERNAL_ERROR",
+        "regex": "(FORE|NEWS)000099",
+        "card": "????000099",
+        "comment": "Internal error",
+        "description": [
+            "An unknown internal error occurred. This may be due to corrupted save data, or a server-side issue. Check the WiiLink server status at [status.wiilink24.com](https://status.wiilink24.com)."
+        ]
+    },
+    {
+        "name": "HTTP_CONTINUE",
+        "regex": "(23|25|11.|220|238|243|372)100",
+        "card": "HTTP 100",
+        "comment": "Continue"
+    },
+    {
+        "name": "HTTP_SWITCHING_PROTOCOLS",
+        "regex": "(23|25|11.|220|238|243|372)101",
+        "card": "HTTP 101",
+        "comment": "Switching Protocols"
+    },
+    {
+        "name": "HTTP_PROCESSING",
+        "regex": "(23|25|11.|220|238|243|372)102",
+        "card": "HTTP 102",
+        "comment": "Processing"
+    },
+    {
+        "name": "HTTP_EARLY_HINTS",
+        "regex": "(23|25|11.|220|238|243|372)103",
+        "card": "HTTP 103",
+        "comment": "Early Hints"
+    },
+    {
+        "name": "HTTP_OK",
+        "regex": "(23|25|11.|220|238|243|372)200",
+        "card": "HTTP 200",
+        "comment": "OK"
+    },
+    {
+        "name": "HTTP_CREATED",
+        "regex": "(23|25|11.|220|238|243|372)201",
+        "card": "HTTP 201",
+        "comment": "Created"
+    },
+    {
+        "name": "HTTP_ACCEPTED",
+        "regex": "(23|25|11.|220|238|243|372)202",
+        "card": "HTTP 202",
+        "comment": "Accepted"
+    },
+    {
+        "name": "HTTP_NON_AUTHORITATIVE",
+        "regex": "(23|25|11.|220|238|243|372)203",
+        "card": "HTTP 203",
+        "comment": "Non-Authoritative Information"
+    },
+    {
+        "name": "HTTP_NO_CONTENT",
+        "regex": "(23|25|11.|220|238|243|372)204",
+        "card": "HTTP 204",
+        "comment": "No Content"
+    },
+    {
+        "name": "HTTP_RESET_CONTENT",
+        "regex": "(23|25|11.|220|238|243|372)205",
+        "card": "HTTP 205",
+        "comment": "Reset Content"
+    },
+    {
+        "name": "HTTP_PARTIAL_CONTENT",
+        "regex": "(23|25|11.|220|238|243|372)206",
+        "card": "HTTP 206",
+        "comment": "Partial Content"
+    },
+    {
+        "name": "HTTP_MULTI_STATUS",
+        "regex": "(23|25|11.|220|238|243|372)207",
+        "card": "HTTP 207",
+        "comment": "Multi-Status"
+    },
+    {
+        "name": "HTTP_ALREADY_REPORTED",
+        "regex": "(23|25|11.|220|238|243|372)208",
+        "card": "HTTP 208",
+        "comment": "Already Reported"
+    },
+    {
+        "name": "HTTP_IM_USED",
+        "regex": "(23|25|11.|220|238|243|372)226",
+        "card": "HTTP 226",
+        "comment": "IM Used"
+    },
+    {
+        "name": "HTTP_MULTIPLE_CHOICES",
+        "regex": "(23|25|11.|220|238|243|372)300",
+        "card": "HTTP 300",
+        "comment": "Multiple Choices"
+    },
+    {
+        "name": "HTTP_MOVED_PERMANENTLY",
+        "regex": "(23|25|11.|220|238|243|372)301",
+        "card": "HTTP 301",
+        "comment": "Moved Permanently"
+    },
+    {
+        "name": "HTTP_MOVED_TEMPORARILY",
+        "regex": "(23|25|11.|220|238|243|372)302",
+        "card": "HTTP 302",
+        "comment": "Found"
+    },
+    {
+        "name": "HTTP_SEE_OTHER",
+        "regex": "(23|25|11.|220|238|243|372)303",
+        "card": "HTTP 303",
+        "comment": "See Other"
+    },
+    {
+        "name": "HTTP_NOT_MODIFIED",
+        "regex": "(23|25|11.|220|238|243|372)304",
+        "card": "HTTP 304",
+        "comment": "Not Modified"
+    },
+    {
+        "name": "HTTP_USE_PROXY",
+        "regex": "(23|25|11.|220|238|243|372)305",
+        "card": "HTTP 305",
+        "comment": "Use Proxy"
+    },
+    {
+        "name": "HTTP_TEMPORARY_REDIRECT",
+        "regex": "(23|25|11.|220|238|243|372)307",
+        "card": "HTTP 307",
+        "comment": "Temporary Redirect"
+    },
+    {
+        "name": "HTTP_PERMANENT_REDIRECT",
+        "regex": "(23|25|11.|220|238|243|372)308",
+        "card": "HTTP 308",
+        "comment": "Permanent Redirect"
+    },
+    {
+        "name": "HTTP_BAD_REQUEST",
+        "regex": "(23|25|11.|220|238|243|372)400",
+        "card": "HTTP 400",
+        "comment": "Bad Request"
+    },
+    {
+        "name": "HTTP_UNAUTHORIZED",
+        "regex": "(11.|220|238|243|372)401",
+        "card": "HTTP 401",
+        "comment": "Unauthorized"
+    },
+    {
+        "name": "HTTP_UNAUTHORIZED",
+        "regex": "(23|25)401",
+        "card": "HTTP 401",
+        "comment": "Unauthorized",
+        "description": [
+            "Possibly caused by a conflicting Wiimmfi and WiiLink WFC patch. Make sure you're not using the WiiLink WFC code on top of a Wiimmfi patched game."
+        ]
+    },
+    {
+        "name": "HTTP_PAYMENT_REQUIRED",
+        "regex": "(23|25|11.|220|238|243|372)402",
+        "card": "HTTP 402",
+        "comment": "Payment Required"
+    },
+    {
+        "name": "HTTP_FORBIDDEN",
+        "regex": "(23|25|11.|220|238|243|372)403",
+        "card": "HTTP 403",
+        "comment": "Forbidden"
+    },
+    {
+        "name": "HTTP_NOT_FOUND",
+        "regex": "(23|25|11.|220|238|243|372)404",
+        "card": "HTTP 404",
+        "comment": "Not Found"
+    },
+    {
+        "name": "HTTP_METHOD_NOT_ALLOWED",
+        "regex": "(23|25|11.|220|238|243|372)405",
+        "card": "HTTP 405",
+        "comment": "Method Not Allowed"
+    },
+    {
+        "name": "HTTP_NOT_ACCEPTABLE",
+        "regex": "(23|25|11.|220|238|243|372)406",
+        "card": "HTTP 406",
+        "comment": "Not Acceptable"
+    },
+    {
+        "name": "HTTP_PROXY_AUTHENTICATION_REQUIRED",
+        "regex": "(23|25|11.|220|238|243|372)407",
+        "card": "HTTP 407",
+        "comment": "Proxy Authentication Required"
+    },
+    {
+        "name": "HTTP_REQUEST_TIME_OUT",
+        "regex": "(23|25|11.|220|238|243|372)408",
+        "card": "HTTP 408",
+        "comment": "Request Timeout"
+    },
+    {
+        "name": "HTTP_CONFLICT",
+        "regex": "(23|25|11.|220|238|243|372)409",
+        "card": "HTTP 409",
+        "comment": "Conflict"
+    },
+    {
+        "name": "HTTP_GONE",
+        "regex": "(23|25|11.|220|238|243|372)410",
+        "card": "HTTP 410",
+        "comment": "Gone"
+    },
+    {
+        "name": "HTTP_LENGTH_REQUIRED",
+        "regex": "(23|25|11.|220|238|243|372)411",
+        "card": "HTTP 411",
+        "comment": "Length Required"
+    },
+    {
+        "name": "HTTP_PRECONDITION_FAILED",
+        "regex": "(23|25|11.|220|238|243|372)412",
+        "card": "HTTP 412",
+        "comment": "Precondition Failed"
+    },
+    {
+        "name": "HTTP_REQUEST_ENTITY_TOO_LARGE",
+        "regex": "(23|25|11.|220|238|243|372)413",
+        "card": "HTTP 413",
+        "comment": "Payload Too Large"
+    },
+    {
+        "name": "HTTP_REQUEST_URI_TOO_LARGE",
+        "regex": "(23|25|11.|220|238|243|372)414",
+        "card": "HTTP 414",
+        "comment": "URI Too Long"
+    },
+    {
+        "name": "HTTP_UNSUPPORTED_MEDIA_TYPE",
+        "regex": "(23|25|11.|220|238|243|372)415",
+        "card": "HTTP 415",
+        "comment": "Unsupported Media Type"
+    },
+    {
+        "name": "HTTP_RANGE_NOT_SATISFIABLE",
+        "regex": "(23|25|11.|220|238|243|372)416",
+        "card": "HTTP 416",
+        "comment": "Range Not Satisfiable"
+    },
+    {
+        "name": "HTTP_EXPECTATION_FAILED",
+        "regex": "(23|25|11.|220|238|243|372)417",
+        "card": "HTTP 417",
+        "comment": "Expectation Failed"
+    },
+    {
+        "name": "HTTP_IM_A_TEAPOT",
+        "regex": "(23|25|11.|220|238|243|372)418",
+        "card": "HTTP 418",
+        "comment": "I'm a teapot"
+    },
+    {
+        "name": "HTTP_MISDIRECTED_REQUEST",
+        "regex": "(23|25|11.|220|238|243|372)421",
+        "card": "HTTP 421",
+        "comment": "Misdirected Request"
+    },
+    {
+        "name": "HTTP_UNPROCESSABLE_ENTITY",
+        "regex": "(23|25|11.|220|238|243|372)422",
+        "card": "HTTP 422",
+        "comment": "Unprocessable Content"
+    },
+    {
+        "name": "HTTP_LOCKED",
+        "regex": "(23|25|11.|220|238|243|372)423",
+        "card": "HTTP 423",
+        "comment": "Locked"
+    },
+    {
+        "name": "HTTP_FAILED_DEPENDENCY",
+        "regex": "(23|25|11.|220|238|243|372)424",
+        "card": "HTTP 424",
+        "comment": "Failed Dependency"
+    },
+    {
+        "name": "HTTP_TOO_EARLY",
+        "regex": "(23|25|11.|220|238|243|372)425",
+        "card": "HTTP 425",
+        "comment": "Too Early"
+    },
+    {
+        "name": "HTTP_UPGRADE_REQUIRED",
+        "regex": "(23|25|11.|220|238|243|372)426",
+        "card": "HTTP 426",
+        "comment": "Upgrade Required"
+    },
+    {
+        "name": "HTTP_PRECONDITION_REQUIRED",
+        "regex": "(23|25|11.|220|238|243|372)428",
+        "card": "HTTP 428",
+        "comment": "Precondition Required"
+    },
+    {
+        "name": "HTTP_TOO_MANY_REQUESTS",
+        "regex": "(23|25|11.|220|238|243|372)429",
+        "card": "HTTP 429",
+        "comment": "Too Many Requests"
+    },
+    {
+        "name": "HTTP_REQUEST_HEADER_FIELDS_TOO_LARGE",
+        "regex": "(23|25|11.|220|238|243|372)431",
+        "card": "HTTP 431",
+        "comment": "Request Header Fields Too Large"
+    },
+    {
+        "name": "HTTP_UNAVAILABLE_FOR_LEGAL_REASONS",
+        "regex": "(23|25|11.|220|238|243|372)451",
+        "card": "HTTP 451",
+        "comment": "Unavailable For Legal Reasons"
+    },
+    {
+        "name": "HTTP_INTERNAL_SERVER_ERROR",
+        "regex": "(23|25|11.|220|238|243|372)500",
+        "card": "HTTP 500",
+        "comment": "Internal Server Error"
+    },
+    {
+        "name": "HTTP_NOT_IMPLEMENTED",
+        "regex": "(23|25|11.|220|238|243|372)501",
+        "card": "HTTP 501",
+        "comment": "Not Implemented"
+    },
+    {
+        "name": "HTTP_BAD_GATEWAY",
+        "regex": "(23|25|11.|220|238|243|372)502",
+        "card": "HTTP 502",
+        "comment": "Bad Gateway"
+    },
+    {
+        "name": "HTTP_SERVICE_UNAVAILABLE",
+        "regex": "(23|25|11.|220|238|243|372)503",
+        "card": "HTTP 503",
+        "comment": "Service Unavailable"
+    },
+    {
+        "name": "HTTP_GATEWAY_TIME_OUT",
+        "regex": "(23|25|11.|220|238|243|372)504",
+        "card": "HTTP 504",
+        "comment": "Gateway Timeout"
+    },
+    {
+        "name": "HTTP_VERSION_NOT_SUPPORTED",
+        "regex": "(23|25|11.|220|238|243|372)505",
+        "card": "HTTP 505",
+        "comment": "HTTP Version Not Supported"
+    },
+    {
+        "name": "HTTP_VARIANT_ALSO_VARIES",
+        "regex": "(23|25|11.|220|238|243|372)506",
+        "card": "HTTP 506",
+        "comment": "Variant Also Negotiates"
+    },
+    {
+        "name": "HTTP_INSUFFICIENT_STORAGE",
+        "regex": "(23|25|11.|220|238|243|372)507",
+        "card": "HTTP 507",
+        "comment": "Insufficient Storage"
+    },
+    {
+        "name": "HTTP_LOOP_DETECTED",
+        "regex": "(23|25|11.|220|238|243|372)508",
+        "card": "HTTP 508",
+        "comment": "Loop Detected"
+    },
+    {
+        "name": "HTTP_NOT_EXTENDED",
+        "regex": "(23|25|11.|220|238|243|372)510",
+        "card": "HTTP 510",
+        "comment": "Not Extended"
+    },
+    {
+        "name": "HTTP_NETWORK_AUTHENTICATION_REQUIRED",
+        "regex": "(23|25|11.|220|238|243|372)511",
+        "card": "HTTP 511",
+        "comment": "Network Authentication Required"
+    }
+]

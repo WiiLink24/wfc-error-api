@@ -1,0 +1,8 @@
+# IDE Settings
+.idea/
+
+# Config file
+config.xml
+
+# Binaries
+wfc-error-api

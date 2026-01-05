@@ -1,0 +1,2 @@
+# wfc-error-api
+This simple API allows you to perform a GET request at `/error?code=XXXXXX`, and returns the relevant error information from `error_codes.json` in the same format as the Wiimmfi error API, for easy interoperability.
