@@ -37,7 +37,7 @@ func lookupCode(c *gin.Context) {
 	var matchingCodes []ErrorCode
 
 	for _, codeInfo := range errorCodes {
-		matches, err := regexp.MatchString(codeInfo.Regex, errorCode)
+		matches, err := regexp.MatchString("^"+codeInfo.Regex+"$", errorCode)
 		checkError(err)
 
 		if matches {
