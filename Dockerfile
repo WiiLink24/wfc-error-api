@@ -11,8 +11,9 @@ COPY go.mod .
 COPY go.sum .
 RUN go mod download
 
-# Copy necessary parts of the Mail-Go source into builder's source
+# Copy necessary parts of the source into builder's source
 COPY *.go ./
+COPY error_codes.json .
 
 # Build to name "app".
 RUN go build -o app .
