@@ -65,41 +65,35 @@ func lookupCode(c *gin.Context) {
 
 	var codeInfoList []ErrorInfo
 
-	for index, codeInfo := range matchingCodes {
-		// Last item found may have a full description
-		if index == len(matchingCodes)-1 {
-			if len(codeInfo.Description) != 0 {
-				codeInfoList = append(codeInfoList, ErrorInfo{
-					Type: "Error",
-					Name: codeInfo.Card,
-					Info: strings.Join(codeInfo.Description, "\n"),
-				})
-			} else {
-				codeInfoList = append(codeInfoList, ErrorInfo{
-					Type: "Error",
-					Name: codeInfo.Card,
-					Info: codeInfo.Comment,
-				})
-			}
-
-			break
-		}
+	for _, codeInfo := range matchingCodes {
+		xCount := strings.Count(codeInfo.Card, "x")
 
 		var itemType string
-		switch index {
-		case 0:
+
+		switch {
+		case xCount >= 4:
 			itemType = "Class"
-		case 1:
+		case xCount >= 3:
 			itemType = "Section"
-		default:
+		case xCount >= 1:
 			itemType = "Group"
+		default:
+			itemType = "Error"
 		}
 
-		codeInfoList = append(codeInfoList, ErrorInfo{
-			Type: itemType,
-			Name: codeInfo.Card,
-			Info: codeInfo.Comment,
-		})
+		if itemType == "Error" && len(codeInfo.Description) != 0 {
+			codeInfoList = append(codeInfoList, ErrorInfo{
+				Type: "Error",
+				Name: codeInfo.Card,
+				Info: strings.Join(codeInfo.Description, "\n"),
+			})
+		} else {
+			codeInfoList = append(codeInfoList, ErrorInfo{
+				Type: itemType,
+				Name: codeInfo.Card,
+				Info: codeInfo.Comment,
+			})
+		}
 	}
 
 	c.JSON(http.StatusOK, [1]ErrorResponse{{
