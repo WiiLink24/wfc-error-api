@@ -123,7 +123,7 @@ func main() {
 	r := gin.Default()
 
 	r.GET("/", func(c *gin.Context) {
-		c.Redirect(http.StatusPermanentRedirect, "https://wfc.wiilink.ca")
+		c.Redirect(http.StatusPermanentRedirect, config.RedirectAddress)
 	})
 	r.GET("/error", lookupCode)
 

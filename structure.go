@@ -3,8 +3,9 @@ package main
 import "encoding/xml"
 
 type Config struct {
-	XMLName    xml.Name `xml:"Config"`
-	APIAddress string   `xml:"APIAddress"`
+	XMLName         xml.Name `xml:"Config"`
+	APIAddress      string   `xml:"APIAddress"`
+	RedirectAddress string   `xml:"RedirectAddress"`
 }
 
 type ErrorCode struct {
