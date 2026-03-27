@@ -1189,139 +1189,139 @@
     },
     {
         "name": "HTTP_CONTINUE",
-        "regex": "(23|25|11.|220|238|243|372)100",
+        "regex": "(23|25|11.|220|238|243|372|268)100",
         "card": "HTTP 100",
         "comment": "Continue"
     },
     {
         "name": "HTTP_SWITCHING_PROTOCOLS",
-        "regex": "(23|25|11.|220|238|243|372)101",
+        "regex": "(23|25|11.|220|238|243|372|268)101",
         "card": "HTTP 101",
         "comment": "Switching Protocols"
     },
     {
         "name": "HTTP_PROCESSING",
-        "regex": "(23|25|11.|220|238|243|372)102",
+        "regex": "(23|25|11.|220|238|243|372|268)102",
         "card": "HTTP 102",
         "comment": "Processing"
     },
     {
         "name": "HTTP_EARLY_HINTS",
-        "regex": "(23|25|11.|220|238|243|372)103",
+        "regex": "(23|25|11.|220|238|243|372|268)103",
         "card": "HTTP 103",
         "comment": "Early Hints"
     },
     {
         "name": "HTTP_OK",
-        "regex": "(23|25|11.|220|238|243|372)200",
+        "regex": "(23|25|11.|220|238|243|372|268)200",
         "card": "HTTP 200",
         "comment": "OK"
     },
     {
         "name": "HTTP_CREATED",
-        "regex": "(23|25|11.|220|238|243|372)201",
+        "regex": "(23|25|11.|220|238|243|372|268)201",
         "card": "HTTP 201",
         "comment": "Created"
     },
     {
         "name": "HTTP_ACCEPTED",
-        "regex": "(23|25|11.|220|238|243|372)202",
+        "regex": "(23|25|11.|220|238|243|372|268)202",
         "card": "HTTP 202",
         "comment": "Accepted"
     },
     {
         "name": "HTTP_NON_AUTHORITATIVE",
-        "regex": "(23|25|11.|220|238|243|372)203",
+        "regex": "(23|25|11.|220|238|243|372|268)203",
         "card": "HTTP 203",
         "comment": "Non-Authoritative Information"
     },
     {
         "name": "HTTP_NO_CONTENT",
-        "regex": "(23|25|11.|220|238|243|372)204",
+        "regex": "(23|25|11.|220|238|243|372|268)204",
         "card": "HTTP 204",
         "comment": "No Content"
     },
     {
         "name": "HTTP_RESET_CONTENT",
-        "regex": "(23|25|11.|220|238|243|372)205",
+        "regex": "(23|25|11.|220|238|243|372|268)205",
         "card": "HTTP 205",
         "comment": "Reset Content"
     },
     {
         "name": "HTTP_PARTIAL_CONTENT",
-        "regex": "(23|25|11.|220|238|243|372)206",
+        "regex": "(23|25|11.|220|238|243|372|268)206",
         "card": "HTTP 206",
         "comment": "Partial Content"
     },
     {
         "name": "HTTP_MULTI_STATUS",
-        "regex": "(23|25|11.|220|238|243|372)207",
+        "regex": "(23|25|11.|220|238|243|372|268)207",
         "card": "HTTP 207",
         "comment": "Multi-Status"
     },
     {
         "name": "HTTP_ALREADY_REPORTED",
-        "regex": "(23|25|11.|220|238|243|372)208",
+        "regex": "(23|25|11.|220|238|243|372|268)208",
         "card": "HTTP 208",
         "comment": "Already Reported"
     },
     {
         "name": "HTTP_IM_USED",
-        "regex": "(23|25|11.|220|238|243|372)226",
+        "regex": "(23|25|11.|220|238|243|372|268)226",
         "card": "HTTP 226",
         "comment": "IM Used"
     },
     {
         "name": "HTTP_MULTIPLE_CHOICES",
-        "regex": "(23|25|11.|220|238|243|372)300",
+        "regex": "(23|25|11.|220|238|243|372|268)300",
         "card": "HTTP 300",
         "comment": "Multiple Choices"
     },
     {
         "name": "HTTP_MOVED_PERMANENTLY",
-        "regex": "(23|25|11.|220|238|243|372)301",
+        "regex": "(23|25|11.|220|238|243|372|268)301",
         "card": "HTTP 301",
         "comment": "Moved Permanently"
     },
     {
         "name": "HTTP_MOVED_TEMPORARILY",
-        "regex": "(23|25|11.|220|238|243|372)302",
+        "regex": "(23|25|11.|220|238|243|372|268)302",
         "card": "HTTP 302",
         "comment": "Found"
     },
     {
         "name": "HTTP_SEE_OTHER",
-        "regex": "(23|25|11.|220|238|243|372)303",
+        "regex": "(23|25|11.|220|238|243|372|268)303",
         "card": "HTTP 303",
         "comment": "See Other"
     },
     {
         "name": "HTTP_NOT_MODIFIED",
-        "regex": "(23|25|11.|220|238|243|372)304",
+        "regex": "(23|25|11.|220|238|243|372|268)304",
         "card": "HTTP 304",
         "comment": "Not Modified"
     },
     {
         "name": "HTTP_USE_PROXY",
-        "regex": "(23|25|11.|220|238|243|372)305",
+        "regex": "(23|25|11.|220|238|243|372|268)305",
         "card": "HTTP 305",
         "comment": "Use Proxy"
     },
     {
         "name": "HTTP_TEMPORARY_REDIRECT",
-        "regex": "(23|25|11.|220|238|243|372)307",
+        "regex": "(23|25|11.|220|238|243|372|268)307",
         "card": "HTTP 307",
         "comment": "Temporary Redirect"
     },
     {
         "name": "HTTP_PERMANENT_REDIRECT",
-        "regex": "(23|25|11.|220|238|243|372)308",
+        "regex": "(23|25|11.|220|238|243|372|268)308",
         "card": "HTTP 308",
         "comment": "Permanent Redirect"
     },
     {
         "name": "HTTP_BAD_REQUEST",
-        "regex": "(23|25|11.|220|238|243|372)400",
+        "regex": "(23|25|11.|220|238|243|372|268)400",
         "card": "HTTP 400",
         "comment": "Bad Request"
     },
@@ -1342,229 +1342,229 @@
     },
     {
         "name": "HTTP_PAYMENT_REQUIRED",
-        "regex": "(23|25|11.|220|238|243|372)402",
+        "regex": "(23|25|11.|220|238|243|372|268)402",
         "card": "HTTP 402",
         "comment": "Payment Required"
     },
     {
         "name": "HTTP_FORBIDDEN",
-        "regex": "(23|25|11.|220|238|243|372)403",
+        "regex": "(23|25|11.|220|238|243|372|268)403",
         "card": "HTTP 403",
         "comment": "Forbidden"
     },
     {
         "name": "HTTP_NOT_FOUND",
-        "regex": "(23|25|11.|220|238|243|372)404",
+        "regex": "(23|25|11.|220|238|243|372|268)404",
         "card": "HTTP 404",
         "comment": "Not Found"
     },
     {
         "name": "HTTP_METHOD_NOT_ALLOWED",
-        "regex": "(23|25|11.|220|238|243|372)405",
+        "regex": "(23|25|11.|220|238|243|372|268)405",
         "card": "HTTP 405",
         "comment": "Method Not Allowed"
     },
     {
         "name": "HTTP_NOT_ACCEPTABLE",
-        "regex": "(23|25|11.|220|238|243|372)406",
+        "regex": "(23|25|11.|220|238|243|372|268)406",
         "card": "HTTP 406",
         "comment": "Not Acceptable"
     },
     {
         "name": "HTTP_PROXY_AUTHENTICATION_REQUIRED",
-        "regex": "(23|25|11.|220|238|243|372)407",
+        "regex": "(23|25|11.|220|238|243|372|268)407",
         "card": "HTTP 407",
         "comment": "Proxy Authentication Required"
     },
     {
         "name": "HTTP_REQUEST_TIME_OUT",
-        "regex": "(23|25|11.|220|238|243|372)408",
+        "regex": "(23|25|11.|220|238|243|372|268)408",
         "card": "HTTP 408",
         "comment": "Request Timeout"
     },
     {
         "name": "HTTP_CONFLICT",
-        "regex": "(23|25|11.|220|238|243|372)409",
+        "regex": "(23|25|11.|220|238|243|372|268)409",
         "card": "HTTP 409",
         "comment": "Conflict"
     },
     {
         "name": "HTTP_GONE",
-        "regex": "(23|25|11.|220|238|243|372)410",
+        "regex": "(23|25|11.|220|238|243|372|268)410",
         "card": "HTTP 410",
         "comment": "Gone"
     },
     {
         "name": "HTTP_LENGTH_REQUIRED",
-        "regex": "(23|25|11.|220|238|243|372)411",
+        "regex": "(23|25|11.|220|238|243|372|268)411",
         "card": "HTTP 411",
         "comment": "Length Required"
     },
     {
         "name": "HTTP_PRECONDITION_FAILED",
-        "regex": "(23|25|11.|220|238|243|372)412",
+        "regex": "(23|25|11.|220|238|243|372|268)412",
         "card": "HTTP 412",
         "comment": "Precondition Failed"
     },
     {
         "name": "HTTP_REQUEST_ENTITY_TOO_LARGE",
-        "regex": "(23|25|11.|220|238|243|372)413",
+        "regex": "(23|25|11.|220|238|243|372|268)413",
         "card": "HTTP 413",
         "comment": "Payload Too Large"
     },
     {
         "name": "HTTP_REQUEST_URI_TOO_LARGE",
-        "regex": "(23|25|11.|220|238|243|372)414",
+        "regex": "(23|25|11.|220|238|243|372|268)414",
         "card": "HTTP 414",
         "comment": "URI Too Long"
     },
     {
         "name": "HTTP_UNSUPPORTED_MEDIA_TYPE",
-        "regex": "(23|25|11.|220|238|243|372)415",
+        "regex": "(23|25|11.|220|238|243|372|268)415",
         "card": "HTTP 415",
         "comment": "Unsupported Media Type"
     },
     {
         "name": "HTTP_RANGE_NOT_SATISFIABLE",
-        "regex": "(23|25|11.|220|238|243|372)416",
+        "regex": "(23|25|11.|220|238|243|372|268)416",
         "card": "HTTP 416",
         "comment": "Range Not Satisfiable"
     },
     {
         "name": "HTTP_EXPECTATION_FAILED",
-        "regex": "(23|25|11.|220|238|243|372)417",
+        "regex": "(23|25|11.|220|238|243|372|268)417",
         "card": "HTTP 417",
         "comment": "Expectation Failed"
     },
     {
         "name": "HTTP_IM_A_TEAPOT",
-        "regex": "(23|25|11.|220|238|243|372)418",
+        "regex": "(23|25|11.|220|238|243|372|268)418",
         "card": "HTTP 418",
         "comment": "I'm a teapot"
     },
     {
         "name": "HTTP_MISDIRECTED_REQUEST",
-        "regex": "(23|25|11.|220|238|243|372)421",
+        "regex": "(23|25|11.|220|238|243|372|268)421",
         "card": "HTTP 421",
         "comment": "Misdirected Request"
     },
     {
         "name": "HTTP_UNPROCESSABLE_ENTITY",
-        "regex": "(23|25|11.|220|238|243|372)422",
+        "regex": "(23|25|11.|220|238|243|372|268)422",
         "card": "HTTP 422",
         "comment": "Unprocessable Content"
     },
     {
         "name": "HTTP_LOCKED",
-        "regex": "(23|25|11.|220|238|243|372)423",
+        "regex": "(23|25|11.|220|238|243|372|268)423",
         "card": "HTTP 423",
         "comment": "Locked"
     },
     {
         "name": "HTTP_FAILED_DEPENDENCY",
-        "regex": "(23|25|11.|220|238|243|372)424",
+        "regex": "(23|25|11.|220|238|243|372|268)424",
         "card": "HTTP 424",
         "comment": "Failed Dependency"
     },
     {
         "name": "HTTP_TOO_EARLY",
-        "regex": "(23|25|11.|220|238|243|372)425",
+        "regex": "(23|25|11.|220|238|243|372|268)425",
         "card": "HTTP 425",
         "comment": "Too Early"
     },
     {
         "name": "HTTP_UPGRADE_REQUIRED",
-        "regex": "(23|25|11.|220|238|243|372)426",
+        "regex": "(23|25|11.|220|238|243|372|268)426",
         "card": "HTTP 426",
         "comment": "Upgrade Required"
     },
     {
         "name": "HTTP_PRECONDITION_REQUIRED",
-        "regex": "(23|25|11.|220|238|243|372)428",
+        "regex": "(23|25|11.|220|238|243|372|268)428",
         "card": "HTTP 428",
         "comment": "Precondition Required"
     },
     {
         "name": "HTTP_TOO_MANY_REQUESTS",
-        "regex": "(23|25|11.|220|238|243|372)429",
+        "regex": "(23|25|11.|220|238|243|372|268)429",
         "card": "HTTP 429",
         "comment": "Too Many Requests"
     },
     {
         "name": "HTTP_REQUEST_HEADER_FIELDS_TOO_LARGE",
-        "regex": "(23|25|11.|220|238|243|372)431",
+        "regex": "(23|25|11.|220|238|243|372|268)431",
         "card": "HTTP 431",
         "comment": "Request Header Fields Too Large"
     },
     {
         "name": "HTTP_UNAVAILABLE_FOR_LEGAL_REASONS",
-        "regex": "(23|25|11.|220|238|243|372)451",
+        "regex": "(23|25|11.|220|238|243|372|268)451",
         "card": "HTTP 451",
         "comment": "Unavailable For Legal Reasons"
     },
     {
         "name": "HTTP_INTERNAL_SERVER_ERROR",
-        "regex": "(23|25|11.|220|238|243|372)500",
+        "regex": "(23|25|11.|220|238|243|372|268)500",
         "card": "HTTP 500",
         "comment": "Internal Server Error"
     },
     {
         "name": "HTTP_NOT_IMPLEMENTED",
-        "regex": "(23|25|11.|220|238|243|372)501",
+        "regex": "(23|25|11.|220|238|243|372|268)501",
         "card": "HTTP 501",
         "comment": "Not Implemented"
     },
     {
         "name": "HTTP_BAD_GATEWAY",
-        "regex": "(23|25|11.|220|238|243|372)502",
+        "regex": "(23|25|11.|220|238|243|372|268)502",
         "card": "HTTP 502",
         "comment": "Bad Gateway"
     },
     {
         "name": "HTTP_SERVICE_UNAVAILABLE",
-        "regex": "(23|25|11.|220|238|243|372)503",
+        "regex": "(23|25|11.|220|238|243|372|268)503",
         "card": "HTTP 503",
         "comment": "Service Unavailable"
     },
     {
         "name": "HTTP_GATEWAY_TIME_OUT",
-        "regex": "(23|25|11.|220|238|243|372)504",
+        "regex": "(23|25|11.|220|238|243|372|268)504",
         "card": "HTTP 504",
         "comment": "Gateway Timeout"
     },
     {
         "name": "HTTP_VERSION_NOT_SUPPORTED",
-        "regex": "(23|25|11.|220|238|243|372)505",
+        "regex": "(23|25|11.|220|238|243|372|268)505",
         "card": "HTTP 505",
         "comment": "HTTP Version Not Supported"
     },
     {
         "name": "HTTP_VARIANT_ALSO_VARIES",
-        "regex": "(23|25|11.|220|238|243|372)506",
+        "regex": "(23|25|11.|220|238|243|372|268)506",
         "card": "HTTP 506",
         "comment": "Variant Also Negotiates"
     },
     {
         "name": "HTTP_INSUFFICIENT_STORAGE",
-        "regex": "(23|25|11.|220|238|243|372)507",
+        "regex": "(23|25|11.|220|238|243|372|268)507",
         "card": "HTTP 507",
         "comment": "Insufficient Storage"
     },
     {
         "name": "HTTP_LOOP_DETECTED",
-        "regex": "(23|25|11.|220|238|243|372)508",
+        "regex": "(23|25|11.|220|238|243|372|268)508",
         "card": "HTTP 508",
         "comment": "Loop Detected"
     },
     {
         "name": "HTTP_NOT_EXTENDED",
-        "regex": "(23|25|11.|220|238|243|372)510",
+        "regex": "(23|25|11.|220|238|243|372|268)510",
         "card": "HTTP 510",
         "comment": "Not Extended"
     },
     {
         "name": "HTTP_NETWORK_AUTHENTICATION_REQUIRED",
-        "regex": "(23|25|11.|220|238|243|372)511",
+        "regex": "(23|25|11.|220|238|243|372|268)511",
         "card": "HTTP 511",
         "comment": "Network Authentication Required"
     }
